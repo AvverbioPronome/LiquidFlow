@@ -4,6 +4,8 @@
 \usepackage[italian]{babel}
 \usepackage[utf8x]{inputenc}
 
+\usepackage{subcaption}
+
 \title{Il percorso di una proposta dall'idea all'approvazione in programma, nel Partito~Pirata~Italiano}
 \author{Giuseppe Cal.}
 \institute{Partito Pirata Italiano -- Pirate Party of Italy}
@@ -100,12 +102,27 @@ Tutte le iniziative che raggiungono un determinato quorum di supporto vengono pr
 \begin{frame}{Metodo Schulze}
 \begin{itemize}
 \item Prende in ingresso gli ordinamenti delle schede e produce un ordinamento dei candidati, in modo che, se la maggior parte dei votanti ha preferito la proposta $A$ a quella $B$, la proposta $A$ sar\`a sopra la $B$ nell'ordinamento finale.
-\item \`E a prova di clone: non c'\`e il problema che due proposte uguali si contendano i voti, perch\'e ogni votante pu\`o mettere pi\`u proposte in una sola scatola, dichiarandosi indifferente fra le due.
+\item \`E a prova di clone: non c'\`e il problema che due proposte uguali si contendano i voti, perch\'e ogni votante pu\`o mettere pi\`u proposte nella stesa scatola, dichiarandosi indifferente fra le due.
 \item {\bfseries La proposta che \`e preferita a tutte le altre arriva prima e vince}.
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Verificare i risultati}
+Alla fine della fase di voto saranno disponibili ai votanti le schede di tutti, con l\`indicazione di chi ha votato cosa.
+
+\begin{itemize}\item Questi dati sono utilizzabili per verificare che la macchina non imbrogli i votanti, scegliendo al loro posto.\end{itemize}
+\begin{figure}
+	\begin{subfigure}[b]{.58\textwidth}
+		\includegraphics[width=\textwidth,]{pics/voters}
+		\caption{Chi e come ha votato la proposta...}
+	\end{subfigure}
+	\begin{subfigure}[b]{.34\textwidth}
+		\includegraphics[width=\textwidth]{pics/scheda-post}
+		\caption{...in dettaglio}
+	\end{subfigure}
+\caption{Come vedere chi ha votato cosa.}
+\end{figure}
+
 \end{frame}
 
 \end{document}
