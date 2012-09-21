@@ -1,20 +1,34 @@
-\documentclass[ignorenonframetext,11pt]{beamer}\usetheme{default}
+\documentclass[ignorenonframetext,11pt]{beamer}
+\usetheme{default}\usecolortheme{crane}
 
 %\documentclass[12pt]{scrartcl}\usepackage{beamerarticle}\usepackage{graphicx}
 
 \usepackage{ragged2e}
-\let\raggedright=\RaggedRight
+\let\raggedright=\RaggedRight % for improved hypenation
 
 \usepackage[italian]{babel}
 \usepackage[utf8x]{inputenc}
 
 \setbeamertemplate{navigation symbols}{} 
 
+\setbeamertemplate{footline}
+{%
+  \leavevmode%
+  \hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm plus1fill,rightskip=.3cm]{title in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshortauthor\ -- \insertshortinstitute
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+
 \usepackage{subcaption}
 
-\title{Il percorso di una proposta dall'idea all'approvazione in programma, nel Partito~Pirata~Italiano}
+\title[Il percorso di una proposta in LQFB]{Il percorso di una proposta dall'idea all'approvazione in programma, nel LiquidFeedback del Partito~Pirata~Italiano}
 \author{Giuseppe Cal.}
-\institute{Partito Pirata Italiano -- Pirate Party of Italy}
+\institute{Partito Pirata Italiano}
 \date{\today}
 
 \begin{document}
@@ -45,7 +59,7 @@ LiquidFeedback 2.x divide il campo decisionale in sezioni ed aree:
 \begin{frame}{Aree, ``interesse'' e quorum}
 Per evitare che vengano discusse proposte poco interessanti, è richiesto che un certo numero di supporters portino avanti le proposte che ritengono interessanti.
 
-Questo numero è regolabile per ogni area ed è proporzionale al numero di utenti che dicono---cliccando sull'apposito \emph{partecipa in quest'area}---di essere interessati ad un'area.
+Questo numero è regolabile in ogni area ed è proporzionale al numero di utenti che dicono (cliccando sull'apposito \emph{partecipa in quest'area}) di essere interessati ad un'area.
 \begin{figure}\includegraphics[width=0.8\textwidth]{pics/partecipa}
 \caption{Come esprimere la propria ``partecipazione.''}
 \end{figure}
@@ -53,7 +67,7 @@ Questo numero è regolabile per ogni area ed è proporzionale al numero di utent
 
 \begin{frame}{Aree e deleghe}
 In alternativa alla partecipazione diretta, è possibile impostare un fiduciario che agirà in proprio nome all'interno di quell'area; o decidere di ignorarla del tutto, fidandosi di ciò che gli altri decidono. Di default, un'area eredita le impostazioni di delega della sezione che la contiene, ma è possibile scegliere in maniera granulare.
-\begin{figure}\includegraphics[width=0.8\textwidth]{pics/delega}
+\begin{figure}\includegraphics[width=0.99\textwidth]{pics/delega}
 \caption{Deleghi qualcuno scegliendo fra i tuoi contatti e salvando.}
 \end{figure}
 \end{frame}
@@ -66,11 +80,15 @@ Una volta scelte le aree che vogliamo seguire, torniamo alla home page. Da qui, 
 \caption{In alto, i filtri. In basso, gli eventi.}
 \end{figure}
 \end{frame}
+
 \section{Processo decisionale}
+\begin{frame}{Supportare una proposta esistente}
+I pirati sono normalmente della gente molto figa, che non perde troppo tempo in chiacchiere; per il tuo ingresso sicuramente ci sarà almeno una proposta in discussione o verifica.
+\end{frame}
+
 \begin{frame}{Creare una nuova proposta... }
 Hai avuto un'idea geniale per un punto che ancora manca nel programma del PP-IT, e vuoi che sia inclusa.
-
-Nulla di più semplice: \begin{itemize}\item scegli l'area adatta;\item clicca su ``Crea una nuova tematica;''\item scrivi e salva.\end{itemize}
+\begin{itemize}\item scegli l'area adatta;\item clicca su ``Crea una nuova tematica;''\item scrivi e salva.\end{itemize}
 \begin{figure}\includegraphics[width=0.8\textwidth]{pics/partecipa}
 \caption{``Crea una nuova tematica''}
 \end{figure}
@@ -78,7 +96,11 @@ Nulla di più semplice: \begin{itemize}\item scegli l'area adatta;\item clicca s
 
 \begin{frame}{...o rispondere ad una già presente}
 \begin{columns}
-\begin{column}{.5\textwidth}Hai visto un'iniziativa. Ma non ti piace o vuoi comunque migliorarla. Bene, durante la fase di discussione hai due possibilità:\begin{itemize}\item Scrivere un'alternativa: link apposito, quindi scrivi e salva; \item Suggerire un'emendamento, tassativo o meno. \end{itemize}\end{column}
+\begin{column}{.5\textwidth}Hai visto un'iniziativa. Ma non ti piace o vuoi comunque migliorarla. Bene, durante la fase di discussione hai due possibilità:\begin{itemize}\item Scrivere un'alternativa: link apposito, quindi scrivi e salva; \item Suggerire un'emendamento, tassativo o meno. \end{itemize}
+\begin{block}{Eppure...}
+Le due cose non sono mutuamente esclusive. Puoi suggerire e insieme proporre tutte le alternative che vuoi. 
+\end{block}
+\end{column}
 \begin{column}{.5\textwidth}\begin{figure}\includegraphics[width=\textwidth]{pics/init}
 \caption{``Crea un'iniziativa alternativa,'' ``Nuovo suggerimento''}
 \end{figure}\end{column}
@@ -92,9 +114,9 @@ Adesso hai presentato la tua iniziativa. C'è chi l'ha gradita e ti ha dato supp
 \end{frame}
 
 \begin{frame}{Votare}
-Terminata la fase di discussione, la tematica entrerà in una fase di congelamento durante la quale sarà possibile soltanto leggere, dare/togliere supporto e presentare iniziative alternative di emergenza.
+Terminata la fase di discussione, la tematica entrerà in una fase di congelamento durante la quale sarà possibile soltanto leggere, dare/togliere supporto e presentare iniziative alternative di emergenza (che non potranno essere discusse).
 
-Tutte le iniziative che raggiungono un determinato quorum di supporto vengono presentate sulla scheda per il voto:\begin{itemize}\item Non è un semplice voto si/no oppure ``la mia preferita è questa.''\item Sulla scheda va espressa una classifica di gradimento delle proposte, ``questa è la mia preferita,'' ``questa andrebbe comunque bene,'' ``questa è brutta, ma quelle sotto sono peggio,'' ``questa mi fa completamente schifo.''\end{itemize}
+Tutte le iniziative che raggiungono un determinato quorum di supporto vengono presentate sulla scheda per il voto:\begin{itemize}\item Non è un semplice voto si/no oppure ``voto per questa.''\item Sulla scheda va espressa una classifica di gradimento delle proposte, ``questa è la mia preferita,'' ``questa andrebbe comunque bene,'' ``questa è brutta, ma quelle sotto sono peggio,'' ``questa mi fa completamente schifo.''\end{itemize}
 \end{frame}
 
 \begin{frame}{La scheda}
@@ -104,11 +126,23 @@ Tutte le iniziative che raggiungono un determinato quorum di supporto vengono pr
 \end{frame}
 
 \begin{frame}{Metodo Schulze}
-\begin{itemize}
-\item Prende in ingresso gli ordinamenti dalle schede e produce un ordinamento delle proposte candidate, in modo che se la maggior parte dei votanti ha preferito la proposta $A$ a quella $B$, la proposta $A$ sarà sopra la $B$ nell'ordinamento finale.
-\item è a prova di clone: non c'è il problema che due proposte uguali si contendano i voti, perché ogni votante può mettere più proposte nella stesa scatola, dichiarandosi indifferente fra le due.
-\item \alert{La proposta che è preferita a tutte le altre arriva prima in tale ordinamento e quindi vince}.
-\end{itemize}
+\begin{columns}
+\begin{column}{.666\textwidth}
+Prende in ingresso gli ordinamenti dalle schede e produce un ordinamento delle proposte candidate, in modo che se la maggior parte dei votanti ha preferito la proposta $A$ a quella $B$, la proposta $A$ sarà sopra la $B$ nell'ordinamento finale.
+
+\alert{La proposta che è preferita a tutte le altre arriva prima in tale ordinamento e quindi vince}.
+
+\begin{block}{Nota bene}
+Non valgono soltanto gli ``scontri diretti:'' viene considerata la connessione più debole sul percorso migliore.
+\end{block}
+\end{column}
+\begin{column}{.333\textwidth}
+\begin{figure}
+\centering\includegraphics[width=\textwidth]{pics/Schulze_method_example1}
+\caption{Grafo orientato con indicate le preferenze coppia a coppia fra le proposte. (Commons, CC-BY-SA)}
+\end{figure}
+\end{column}
+\end{columns}
 \end{frame}
 \section{Dopo il voto}
 \begin{frame}{Verificare i risultati}
@@ -124,8 +158,11 @@ Alla fine della fase di voto saranno disponibili ai votanti le schede di tutti, 
 		\includegraphics[width=\textwidth]{pics/scheda-post}
 		\caption{...in dettaglio}
 	\end{subfigure}
-\caption{La prima, sulla pagina della proposta. La seconda, cliccando sul pollice colorato dell'utente desiderato. Un pallino giallo indica astensione.}
+\caption{La prima, sulla pagina della proposta. La seconda, cliccando sul pollice colorato dell'utente desiderato. Un pallino giallo indica astensione; uno sfondo arancione chi ha eseguito il tuo voto.}
 \end{figure}
 \end{frame}
 
+\begin{frame}{Voti palesi: problema?}
+
+\end{frame}
 \end{document}
