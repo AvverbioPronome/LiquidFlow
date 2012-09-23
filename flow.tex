@@ -24,8 +24,8 @@
 
 \usepackage{subcaption}
 
-\title[Il percorso di una proposta in LiquidFeedback]{Il percorso di una proposta dall'idea all'approvazione in programma, nel LiquidFeedback del Partito~Pirata~Italiano}
-\author{Giuseppe Cal.}
+\title{LiquidFeedback: Interactive Democracy}
+\author[Cal. \& Robotica]{Giuseppe Cal. \and Daniele Robotica}
 \institute{Partito Pirata Italiano}
 \date{\today}
 
@@ -34,7 +34,7 @@
 \begin{frame}
 \maketitle
 
-Se avete domande, \textsl{interrompetemi in \underline{qualsiasi} momento.}
+Se avete domande, \textsl{interrompeteci in \underline{qualsiasi} momento.}
 \end{frame}
 
 \section{Struttura del software}
@@ -89,7 +89,7 @@ Una volta scelte le aree che vogliamo seguire, torniamo alla home page. Da qui, 
 \begin{column}{.5\textwidth}
 I pirati sono normalmente della gente molto figa, che non perde troppo tempo in chiacchiere; per il tuo ingresso ci sarà almeno una proposta in attesa di entrare in discussione o verifica.
 \begin{itemize}
-\item Sostenendo una proposta le consenti di andare ai voti.
+\item Sostenendo una proposta le consenti di andare al voto.
 \item Sostenere una proposta significa anche esprimere interesse per il tema che la contiene, consentendogli di entrare in discussione.
 \end{itemize}
 \end{column}
@@ -145,7 +145,7 @@ Sulla scheda va espressa una classifica di gradimento delle proposte, ``questa �
 \begin{column}{.666\textwidth}
 Prende in ingresso gli ordinamenti dalle schede e produce un ordinamento delle proposte candidate, in modo che se la maggior parte dei votanti ha preferito la proposta $A$ a quella $B$, la proposta $A$ sarà sopra la $B$ nell'ordinamento finale.
 
-\alert{La proposta che è preferita a tutte le altre arriva prima in tale ordinamento e quindi vince}.
+\alert{Quella proposta che è preferita ad ogni altra arriva in prima posizione  nell'ordinamento finale e quindi vince}.
 
 \begin{block}{Nota bene}
 Non valgono soltanto gli ``scontri diretti:'' viene considerata la connessione più debole sul percorso migliore.
@@ -173,14 +173,12 @@ Alla fine della fase di voto saranno disponibili ai votanti le schede di tutti, 
 		\includegraphics[width=\textwidth]{pics/scheda-post}
 		\caption{...in dettaglio}
 	\end{subfigure}
-\caption{La prima, sulla pagina della proposta. La seconda, cliccando sul pollice colorato dell'utente desiderato. Un pallino giallo indica astensione.}
+\caption{La prima, sulla pagina della proposta. La seconda, cliccando sul pollice colorato dell'utente desiderato. Un pallino giallo indica astensione; uno sfondo arancione insegue il tuo voto.}
 \end{figure}
 \end{frame}
 
-\begin{frame}{Che fine ha fatto il mio voto?}
-; uno sfondo arancione chi ha eseguito il tuo voto
-
-\end{frame}
+%\begin{frame}{Che fine ha fatto il mio voto?}
+%\end{frame}
 
 \begin{frame}{Voti palesi: problema?}
 \begin{columns}
