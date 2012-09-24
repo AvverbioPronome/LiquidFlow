@@ -38,19 +38,20 @@ Se avete domande, \textsl{interrompeteci in \underline{qualsiasi} momento.}
 \end{frame}
 
 \section{Struttura del software}
-\begin{frame}{Sezioni ed aree}
+
 LiquidFeedback 2.x divide il campo decisionale in sezioni ed aree: 
-
-\begin{figure}
-\includegraphics[width=0.95\textwidth]{pics/unitarea}
-\caption<document>{Le sezioni sulla federazione terra luna con le rispettive aree. Intravista, la sezione sul sistema solare.}
-\end{figure}
-\end{frame}
-
 \begin{itemize}
 \item Una \emph{sezione} (\emph{unit}) raggruppa insieme aree affini, come ad esempio, quelle relative all'amministrazione piuttosto che ai contenuti o alla produzione documentale.
 \item Un'\emph{area} è un insieme più ristretto, utile a trattare in modo separato gli affari esteri e la regolamentazione dei trasporti, nell'esempio.
 \end{itemize}
+
+\begin{frame}{Sezioni ed aree}
+\begin{figure}
+\includegraphics[width=\textwidth]{pics/unitarea-wide}
+\only<article>{\caption{Le sezioni sulla federazione terra luna con le rispettive aree. Intravista, la sezione sul sistema solare.}}
+\end{figure}
+\end{frame}
+
 
 \begin{frame}{Aree, ``partecipazione'' e quorum}
 Per evitare che vengano discusse proposte poco interessanti, è richiesto che un certo numero di supporters portino avanti le proposte che ritengono interessanti.
@@ -61,13 +62,13 @@ Questo numero è regolabile in ogni area ed è proporzionale al numero di utenti
 \end{figure}
 \end{frame}
 
-\begin{frame}[b]{Aree e deleghe}
-\begin{columns}\begin{column}{.6\textwidth}
-In alternativa alla partecipazione diretta, è possibile \textbf{impostare un fiduciario} che agirà in proprio nome all'interno di quell'area; o \textit{ignorarla del tutto, fidandosi di ciò che gli altri decidono}.\end{column}
-\begin{column}{.4\textwidth}\begin{block}{Quorum}Anche delegando si concorre al calcolo della popolazione di un'area, e quindi dei quorum.\end{block}\end{column}
-\end{columns}
+In alternativa alla partecipazione diretta, è possibile \textbf{impostare un fiduciario} che agirà in proprio nome all'interno di quell'area; o \textit{ignorarla del tutto, fidandosi di ciò che gli altri decidono}.
+
+\begin{description}\item[Quorum:] anche delegando si concorre al calcolo della popolazione di un'area, e quindi dei quorum.\end{description}
+
+\begin{frame}{Aree e deleghe}
 \begin{figure}\centering\includegraphics[width=0.99\textwidth]{pics/delega}
-\caption{Deleghi qualcuno scegliendo fra i tuoi contatti e salvando; di default, un'area eredita le impostazioni dalla sezione che la contiene.}
+\only<article>{\caption{Deleghi qualcuno scegliendo fra i tuoi contatti e salvando; di default, un'area eredita le impostazioni dalla sezione che la contiene.}}
 \end{figure}
 \end{frame}
 
